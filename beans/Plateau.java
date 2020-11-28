@@ -107,7 +107,9 @@ public class Plateau {
 		}
 		return 0;
 	}
-	
+	/**
+	* Recherche dans chaque colonne des suites de 4 consécutives
+	*/
 	private int colonne4Egale() {
 		for(int c=0;c<NB_CASES;c++) {
 			for(int l=0;l<NB_CASES-3;l++) {
