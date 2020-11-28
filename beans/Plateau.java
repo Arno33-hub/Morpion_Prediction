@@ -92,7 +92,9 @@ public class Plateau {
 		if(dG!=0)		return dG;		
 		return 0;
 	}
-	
+	/**
+	* Recherche de lignes contenant 4 identiques consécutives
+	*/
 	private int ligne4Egale() {
 		for(int l=0;l<NB_CASES;l++) {
 			for(int c=0;c<NB_CASES-3;c++) {
