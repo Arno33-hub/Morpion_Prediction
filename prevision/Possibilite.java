@@ -29,6 +29,7 @@ public class Possibilite {
 		m_suivant=new ArrayList<>();
 		// on recopie en dur le plateau
 		m_plateau=new Plateau(plateau);
+		m_precedent=null;
 	}
 	
 	/**
