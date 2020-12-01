@@ -7,13 +7,8 @@ import prevision.Possibilite;
 public class TestPlateau {
 
 	public static void main(String[] args) {
-		Plateau p=new Plateau(1);			
-		p.place(1, 2);	// joueur 1			// -----
-		p.place(2, 2);	// joueur 2			//  
-		p.place(2, 3);	// joueur 1			//   1	
-		p.place(3, 3);	// joueur 2			//   21
-		p.place(3, 4);	// joueur 1			//    21
-		p.place(4, 4);	// joueur 2			//     2
+		Plateau p=new Plateau(1);	
+		p.init2();
 		System.out.println("=== Départ ===");
 		System.out.println(p);
 		

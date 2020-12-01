@@ -150,4 +150,20 @@ public class Plateau {
 		}
 		return 0;
 	}
+	public void init1() {
+		place(1, 2);	// joueur 1			// -----
+		place(2, 2);	// joueur 2			//  
+		place(2, 3);	// joueur 1			//   1	
+		place(3, 3);	// joueur 2			//   21
+		place(3, 4);	// joueur 1			//    21
+		place(4, 4);	// joueur 2			//     2
+	}
+	public void init2() {
+		place(1, 2);	// joueur 1			// -----
+		place(2, 2);	// joueur 2			//  
+		place(2, 3);	// joueur 1			//   1	
+		place(3, 3);	// joueur 2			//   21
+											//    2
+											//     
+	}
 }
