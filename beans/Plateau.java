@@ -51,8 +51,10 @@ public class Plateau {
 		m_plateau[l][c].setEtat(EtatCase.values()[joueur]);
 	}
 	/**
-	* Place, de la part du joueur courant, une marque aux coordonnées indiquées, puis change de joueur
-	*/
+	 * Place, de la part du joueur courant, une marque aux coordonnées indiquées, puis change de joueur
+	 * @param l : quelle ligne ?
+	 * @param c : quelle colonne ?
+	 */
 	public void place(int l, int c) {
 		m_plateau[l][c].setEtat(EtatCase.values()[m_joueurCourant]);
 		changeJoueur();
