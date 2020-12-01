@@ -14,7 +14,7 @@ public class TestPlateau {
 		
 		// test des possibilités de niveau 1
 		Possibilite poss=new Possibilite(p);
-		// on change de joueur
+		/*// on change de joueur
 		int joueur=Plateau.autreJoueur(poss.getJoueur());
 		int trouve=0;
 		for(int l=0;trouve==0 && l<Plateau.NB_CASES;l++) {
@@ -29,13 +29,15 @@ public class TestPlateau {
 					System.out.format("Ligne %d, Colonne %d : %d\n",l,c,trouve);
 				}
 			}
-		}
+		}*/
+		
+		poss.generePossibilites();
 		
 		System.out.println("Restitution des résultats :");
 		System.out.println("===========================");
-		if(trouve!=0) {
+		/*if(trouve!=0) {
 			System.out.println(EtatCase.values()[trouve]+" a gagné !");
-		}
+		}*/
 		for(Possibilite ps:poss.getSuivant()) {
 			int qag = ps.getPlateau().quiAGagne();
 			System.out.println(ps.getPlateau()+String.format(" -> %s (Note=%d)\n", qag==0?"NON !":EtatCase.values()[qag],ps.quiAGagne()));

@@ -32,6 +32,23 @@ public class Possibilite {
 		m_precedent=null;
 	}
 	
+	public void generePossibilites() {
+		int joueur=m_plateau.autreJoueur(getJoueur());
+		int trouve=0;
+		for(int l=0;trouve==0 && l<Plateau.NB_CASES;l++) {
+			for(int c=0;trouve==0 && c<Plateau.NB_CASES;c++) {
+				if(m_plateau.getPlateau()[l][c].estVide()) {
+					Possibilite np=new Possibilite(m_profondeur+1, joueur, l, c, m_plateau, this);
+					m_suivant.add(np);
+					// System.out.println(np.getPlateau());
+					trouve=np.getPlateau().quiAGagne();
+					if(trouve!=0)
+						System.out.format("Joueur %d -> Ligne %d, Colonne %d : %d\n", joueur, l, c, trouve);
+				}
+			}
+		}
+	}
+	
 	/**
 	 * Création d'une possibilité Enfant. On lui colle le plateau, puis le mouvement du joueur.
 	 * 
